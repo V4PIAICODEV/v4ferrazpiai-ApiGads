@@ -1,44 +1,20 @@
-# ============================================
-# V4 Ferraz Piai Internal Data Hub
-# Docker Configuration
-# ============================================
-
-# Use official Node.js LTS image (Alpine for smaller size)
+# Usa uma imagem leve do Node.js
 FROM node:18-alpine
 
-# Set metadata
-LABEL maintainer="ferramenta.ferraz@v4company.com"
-LABEL description="V4 Ferraz Piai Internal Data Hub - Google Ads API Integration"
-LABEL version="1.0.0"
-
-# Set working directory
+# Define o diretório de trabalho
 WORKDIR /app
 
-# Copy dependency files first (for better caching)
+# Copia os arquivos de dependência
 COPY package*.json ./
 
-# Install production dependencies only
-RUN npm install --production --silent
+# Instala as dependências
+RUN npm install --production
 
-# Copy application source code
+# Copia o resto do código
 COPY . .
 
-# Create a non-root user for security
-RUN addgroup -g 1001 -S nodejs && \
-    adduser -S nodejs -u 1001
+# Expõe a porta 3000
+EXPOSE 2888
 
-# Change ownership of the application files
-RUN chown -R nodejs:nodejs /app
-
-# Switch to non-root user
-USER nodejs
-
-# Expose port 3000
-EXPOSE 3000
-
-# Health check
-HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-  CMD node -e "require('http').get('http://localhost:3000/health', (r) => {process.exit(r.statusCode === 200 ? 0 : 1)})"
-
-# Start the application
+# Comando para iniciar
 CMD ["npm", "start"]

@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .gradient-text {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #ef4444 0%, #ffffff 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -17,17 +17,16 @@
         }
         .card-hover:hover {
             transform: translateY(-4px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 20px 25px -5px rgba(220, 38, 38, 0.2);
         }
     </style>
 </head>
-<body class="bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white font-sans antialiased">
+<body class="bg-gradient-to-br from-gray-900 via-red-950 to-black text-white font-sans antialiased">
     
-    <!-- Navigation -->
-    <nav class="backdrop-blur-md bg-white/5 border-b border-white/10 p-6 sticky top-0 z-50">
+    <nav class="backdrop-blur-md bg-black/50 border-b border-red-900/30 p-6 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <div class="flex items-center space-x-3">
-                <div class="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center font-bold text-xl">V4</div>
+                <div class="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center font-bold text-xl text-white">V4</div>
                 <div>
                     <div class="text-xl font-bold tracking-tight">V4 Ferraz Piai</div>
                     <div class="text-xs text-gray-400">Internal Data Hub & Automation</div>
@@ -36,15 +35,14 @@
             <div class="space-x-6 flex items-center">
                 <a href="/privacy" class="text-gray-300 hover:text-white text-sm transition">Privacy Policy</a>
                 <a href="/terms" class="text-gray-300 hover:text-white text-sm transition">Terms of Service</a>
-                <a href="/dashboard" class="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 px-6 py-2.5 rounded-lg text-sm font-semibold transition shadow-lg">Access System</a>
+                <a href="/dashboard" class="bg-red-600 hover:bg-red-700 px-6 py-2.5 rounded-lg text-sm font-semibold transition shadow-lg text-white">Access System</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <div class="max-w-6xl mx-auto mt-16 px-6">
         <div class="text-center mb-16">
-            <div class="inline-block mb-4 px-4 py-2 bg-purple-500/20 rounded-full text-purple-300 text-sm font-semibold border border-purple-500/30">
+            <div class="inline-block mb-4 px-4 py-2 bg-red-900/20 rounded-full text-red-400 text-sm font-semibold border border-red-900/50">
                 🔒 Internal Use Only - Google Ads API Integration
             </div>
             <h1 class="text-6xl font-extrabold mb-6 leading-tight">
@@ -52,91 +50,84 @@
                 <span class="gradient-text">Google Ads Automation Platform</span>
             </h1>
             <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-                A proprietary Node.js application built exclusively for V4 Ferraz Piai's operational team. 
+                A proprietary Node.js application built exclusively for V4 Ferraz Piai's operational team.
                 Centralized interface for traffic managers to audit, report, and optimize multiple client accounts simultaneously.
             </p>
             <div class="flex gap-4 justify-center">
                 <a href="#architecture" class="px-8 py-3 bg-white/10 hover:bg-white/20 rounded-lg font-semibold transition border border-white/20">View Architecture</a>
-                <a href="#use-cases" class="px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 rounded-lg font-semibold transition shadow-lg">Use Cases</a>
+                <a href="#use-cases" class="px-8 py-3 bg-red-600 hover:bg-red-700 rounded-lg font-semibold transition shadow-lg text-white">Use Cases</a>
             </div>
         </div>
 
-        <!-- Key Metrics -->
         <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
-            <div class="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10 text-center">
-                <div class="text-3xl font-bold text-purple-400">100%</div>
+            <div class="bg-black/40 backdrop-blur-sm p-6 rounded-xl border border-red-900/30 text-center">
+                <div class="text-3xl font-bold text-red-500">100%</div>
                 <div class="text-sm text-gray-400 mt-2">Internal Use</div>
             </div>
-            <div class="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10 text-center">
-                <div class="text-3xl font-bold text-pink-400">24/7</div>
+            <div class="bg-black/40 backdrop-blur-sm p-6 rounded-xl border border-red-900/30 text-center">
+                <div class="text-3xl font-bold text-white">24/7</div>
                 <div class="text-sm text-gray-400 mt-2">Automated Monitoring</div>
             </div>
-            <div class="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10 text-center">
-                <div class="text-3xl font-bold text-blue-400">PostgreSQL</div>
+            <div class="bg-black/40 backdrop-blur-sm p-6 rounded-xl border border-red-900/30 text-center">
+                <div class="text-3xl font-bold text-red-500">PostgreSQL</div>
                 <div class="text-sm text-gray-400 mt-2">Secure Data Storage</div>
             </div>
-            <div class="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10 text-center">
-                <div class="text-3xl font-bold text-green-400">N8N</div>
+            <div class="bg-black/40 backdrop-blur-sm p-6 rounded-xl border border-red-900/30 text-center">
+                <div class="text-3xl font-bold text-white">N8N</div>
                 <div class="text-sm text-gray-400 mt-2">Workflow Integration</div>
             </div>
         </div>
 
-        <!-- Primary Use Cases -->
         <div id="use-cases" class="mb-16">
             <h2 class="text-3xl font-bold mb-8 text-center">Primary Use Cases & Functionality</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 
-                <!-- Use Case 1 -->
-                <div class="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10 card-hover">
-                    <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-4 text-2xl">📊</div>
-                    <h3 class="text-xl font-bold mb-3 text-blue-300">Automated Audit & Monitoring</h3>
+                <div class="bg-black/40 backdrop-blur-sm p-8 rounded-2xl border border-white/10 card-hover">
+                    <div class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center mb-4 text-2xl text-red-500">📊</div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Automated Audit & Monitoring</h3>
                     <p class="text-gray-400 mb-4 text-sm leading-relaxed">Read-only access for comprehensive account health checks:</p>
                     <ul class="text-sm text-gray-300 space-y-2">
-                        <li class="flex items-start"><span class="text-blue-400 mr-2">•</span>Identifies critical issues (low budget, disapproved ads)</li>
-                        <li class="flex items-start"><span class="text-blue-400 mr-2">•</span>Campaigns with zero impressions detection</li>
-                        <li class="flex items-start"><span class="text-blue-400 mr-2">•</span>Historical performance metrics (CPA, ROAS, CPC)</li>
-                        <li class="flex items-start"><span class="text-blue-400 mr-2">•</span>PostgreSQL caching for trend analysis</li>
+                        <li class="flex items-start"><span class="text-red-500 mr-2">•</span>Identifies critical issues (low budget, disapproved ads)</li>
+                        <li class="flex items-start"><span class="text-red-500 mr-2">•</span>Campaigns with zero impressions detection</li>
+                        <li class="flex items-start"><span class="text-red-500 mr-2">•</span>Historical performance metrics (CPA, ROAS, CPC)</li>
+                        <li class="flex items-start"><span class="text-red-500 mr-2">•</span>PostgreSQL caching for trend analysis</li>
                     </ul>
                 </div>
 
-                <!-- Use Case 2 -->
-                <div class="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10 card-hover">
-                    <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-4 text-2xl">⚙️</div>
-                    <h3 class="text-xl font-bold mb-3 text-purple-300">Campaign Optimization & Management</h3>
+                <div class="bg-black/40 backdrop-blur-sm p-8 rounded-2xl border border-white/10 card-hover">
+                    <div class="w-12 h-12 bg-red-900/50 rounded-xl flex items-center justify-center mb-4 text-2xl text-white">⚙️</div>
+                    <h3 class="text-xl font-bold mb-3 text-red-500">Campaign Optimization & Management</h3>
                     <p class="text-gray-400 mb-4 text-sm leading-relaxed">Write access for rule-based automation:</p>
                     <ul class="text-sm text-gray-300 space-y-2">
-                        <li class="flex items-start"><span class="text-purple-400 mr-2">•</span>Rule-based keyword/ad pausing (KPI thresholds)</li>
-                        <li class="flex items-start"><span class="text-purple-400 mr-2">•</span>Automated bid adjustments via N8N workflows</li>
-                        <li class="flex items-start"><span class="text-purple-400 mr-2">•</span>Ad Group creation and expansion</li>
-                        <li class="flex items-start"><span class="text-purple-400 mr-2">•</span>Keyword addition and text ad deployment</li>
+                        <li class="flex items-start"><span class="text-white mr-2">•</span>Rule-based keyword/ad pausing (KPI thresholds)</li>
+                        <li class="flex items-start"><span class="text-white mr-2">•</span>Automated bid adjustments via N8N workflows</li>
+                        <li class="flex items-start"><span class="text-white mr-2">•</span>Ad Group creation and expansion</li>
+                        <li class="flex items-start"><span class="text-white mr-2">•</span>Keyword addition and text ad deployment</li>
                     </ul>
                 </div>
 
-                <!-- Use Case 3 -->
-                <div class="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10 card-hover">
-                    <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-4 text-2xl">🤖</div>
-                    <h3 class="text-xl font-bold mb-3 text-green-300">AI-Powered Insights</h3>
+                <div class="bg-black/40 backdrop-blur-sm p-8 rounded-2xl border border-white/10 card-hover">
+                    <div class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center mb-4 text-2xl text-red-500">🤖</div>
+                    <h3 class="text-xl font-bold mb-3 text-white">AI-Powered Insights</h3>
                     <p class="text-gray-400 mb-4 text-sm leading-relaxed">Intelligent processing and recommendations:</p>
                     <ul class="text-sm text-gray-300 space-y-2">
-                        <li class="flex items-start"><span class="text-green-400 mr-2">•</span>Performance data analysis via internal AI logic</li>
-                        <li class="flex items-start"><span class="text-green-400 mr-2">•</span>Automated bid adjustment suggestions</li>
-                        <li class="flex items-start"><span class="text-green-400 mr-2">•</span>Ad copy improvement recommendations</li>
-                        <li class="flex items-start"><span class="text-green-400 mr-2">•</span>N8N workflow integration for ML insights</li>
+                        <li class="flex items-start"><span class="text-red-500 mr-2">•</span>Performance data analysis via internal AI logic</li>
+                        <li class="flex items-start"><span class="text-red-500 mr-2">•</span>Automated bid adjustment suggestions</li>
+                        <li class="flex items-start"><span class="text-red-500 mr-2">•</span>Ad copy improvement recommendations</li>
+                        <li class="flex items-start"><span class="text-red-500 mr-2">•</span>N8N workflow integration for ML insights</li>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <!-- Technical Architecture -->
         <div id="architecture" class="mb-16">
             <h2 class="text-3xl font-bold mb-8 text-center">Technical Architecture & Security</h2>
-            <div class="bg-white/5 backdrop-blur-sm p-10 rounded-2xl border border-white/10">
+            <div class="bg-black/40 backdrop-blur-sm p-10 rounded-2xl border border-white/10">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     
-                    <!-- Stack -->
                     <div>
-                        <h3 class="text-xl font-bold mb-4 text-purple-300 flex items-center">
-                            <span class="w-8 h-8 bg-purple-500/20 rounded-lg flex items-center justify-center mr-3 text-sm">💻</span>
+                        <h3 class="text-xl font-bold mb-4 text-white flex items-center">
+                            <span class="w-8 h-8 bg-red-900/50 rounded-lg flex items-center justify-center mr-3 text-sm">💻</span>
                             Technology Stack
                         </h3>
                         <div class="space-y-3 text-sm">
@@ -159,10 +150,9 @@
                         </div>
                     </div>
 
-                    <!-- Security -->
                     <div>
-                        <h3 class="text-xl font-bold mb-4 text-green-300 flex items-center">
-                            <span class="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center mr-3 text-sm">🔒</span>
+                        <h3 class="text-xl font-bold mb-4 text-white flex items-center">
+                            <span class="w-8 h-8 bg-green-900/20 rounded-lg flex items-center justify-center mr-3 text-sm text-green-400">🔒</span>
                             Security & Compliance
                         </h3>
                         <div class="space-y-3 text-sm">
@@ -182,34 +172,32 @@
                     </div>
                 </div>
 
-                <!-- Data Policy -->
-                <div class="mt-8 p-6 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-xl border border-purple-500/30">
-                    <h4 class="font-bold text-lg mb-3 text-purple-200">📋 Data Usage Policy</h4>
+                <div class="mt-8 p-6 bg-red-900/20 rounded-xl border border-red-500/30">
+                    <h4 class="font-bold text-lg mb-3 text-red-200">📋 Data Usage Policy</h4>
                     <ul class="text-sm text-gray-300 space-y-2">
-                        <li class="flex items-start"><span class="text-purple-400 mr-2">✓</span>Data used exclusively for managing authenticated accounts</li>
-                        <li class="flex items-start"><span class="text-purple-400 mr-2">✓</span>No external sharing, selling, or unauthorized transfers</li>
-                        <li class="flex items-start"><span class="text-purple-400 mr-2">✓</span>Temporary storage for analysis purposes only</li>
-                        <li class="flex items-start"><span class="text-purple-400 mr-2">✓</span>No client-facing access to this internal tool</li>
-                        <li class="flex items-start"><span class="text-purple-400 mr-2">✓</span>Strict compliance with Limited Use requirements</li>
+                        <li class="flex items-start"><span class="text-red-500 mr-2">✓</span>Data used exclusively for managing authenticated accounts</li>
+                        <li class="flex items-start"><span class="text-red-500 mr-2">✓</span>No external sharing, selling, or unauthorized transfers</li>
+                        <li class="flex items-start"><span class="text-red-500 mr-2">✓</span>Temporary storage for analysis purposes only</li>
+                        <li class="flex items-start"><span class="text-red-500 mr-2">✓</span>No client-facing access to this internal tool</li>
+                        <li class="flex items-start"><span class="text-red-500 mr-2">✓</span>Strict compliance with Limited Use requirements</li>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <!-- API Scopes -->
         <div class="mb-16">
             <h2 class="text-3xl font-bold mb-8 text-center">Required API Scopes</h2>
-            <div class="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10">
+            <div class="bg-black/40 backdrop-blur-sm p-8 rounded-2xl border border-white/10">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div class="flex items-start space-x-4">
-                        <div class="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center flex-shrink-0 text-blue-400">📖</div>
+                        <div class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center flex-shrink-0 text-white">📖</div>
                         <div>
                             <div class="font-semibold text-white mb-1">Read Access</div>
                             <div class="text-sm text-gray-400">Campaign metrics, performance data, account structure, ad group configurations, keyword lists</div>
                         </div>
                     </div>
                     <div class="flex items-start space-x-4">
-                        <div class="w-10 h-10 bg-purple-500/20 rounded-lg flex items-center justify-center flex-shrink-0 text-purple-400">✏️</div>
+                        <div class="w-10 h-10 bg-red-900/50 rounded-lg flex items-center justify-center flex-shrink-0 text-white">✏️</div>
                         <div>
                             <div class="font-semibold text-white mb-1">Write Access</div>
                             <div class="text-sm text-gray-400">Campaign modifications, ad creation, keyword management, bid adjustments, ad group operations</div>
@@ -219,15 +207,14 @@
             </div>
         </div>
 
-        <!-- User Type -->
         <div class="mb-16">
-            <div class="bg-gradient-to-r from-red-500/10 to-orange-500/10 border border-red-500/30 rounded-2xl p-8">
+            <div class="bg-gradient-to-r from-red-900/20 to-black border border-red-500/30 rounded-2xl p-8">
                 <div class="flex items-center justify-center mb-4">
-                    <div class="w-16 h-16 bg-red-500/20 rounded-2xl flex items-center justify-center text-3xl">👥</div>
+                    <div class="w-16 h-16 bg-red-600/20 rounded-2xl flex items-center justify-center text-3xl">👥</div>
                 </div>
                 <h2 class="text-2xl font-bold mb-4 text-center">User Type: Internal Only</h2>
                 <p class="text-center text-gray-300 max-w-2xl mx-auto">
-                    This application is designed exclusively for <strong>V4 Ferraz Piai agency employees</strong>. 
+                    This application is designed exclusively for <strong>V4 Ferraz Piai agency employees</strong>.
                     No external clients have access to this platform. It serves as a centralized operations hub 
                     for our traffic management team to efficiently manage multiple client accounts.
                 </p>
@@ -236,26 +223,25 @@
 
     </div>
 
-    <!-- Footer -->
-    <footer class="mt-20 py-12 border-t border-white/10 bg-white/5 backdrop-blur-sm">
+    <footer class="mt-20 py-12 border-t border-white/10 bg-black/80 backdrop-blur-sm">
         <div class="max-w-6xl mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
                 <div>
-                    <div class="font-bold text-lg mb-3">V4 Ferraz Piai</div>
+                    <div class="font-bold text-lg mb-3 text-white">V4 Ferraz Piai</div>
                     <p class="text-sm text-gray-400">Enterprise Google Ads automation platform for internal operations and client account management.</p>
                 </div>
                 <div>
-                    <div class="font-bold text-lg mb-3">Quick Links</div>
+                    <div class="font-bold text-lg mb-3 text-white">Quick Links</div>
                     <div class="space-y-2 text-sm">
-                        <a href="/privacy" class="block text-gray-400 hover:text-white transition">Privacy Policy</a>
-                        <a href="/terms" class="block text-gray-400 hover:text-white transition">Terms of Service</a>
-                        <a href="/dashboard" class="block text-gray-400 hover:text-white transition">System Dashboard</a>
+                        <a href="/privacy" class="block text-gray-400 hover:text-red-500 transition">Privacy Policy</a>
+                        <a href="/terms" class="block text-gray-400 hover:text-red-500 transition">Terms of Service</a>
+                        <a href="/dashboard" class="block text-gray-400 hover:text-red-500 transition">System Dashboard</a>
                     </div>
                 </div>
                 <div>
-                    <div class="font-bold text-lg mb-3">Contact</div>
+                    <div class="font-bold text-lg mb-3 text-white">Contact</div>
                     <p class="text-sm text-gray-400">For API verification inquiries:</p>
-                    <p class="text-sm text-purple-400 mt-2">ferramenta.ferraz@v4company.com</p>
+                    <p class="text-sm text-red-500 mt-2">ferramenta.ferraz@v4company.com</p>
                 </div>
             </div>
             <div class="text-center text-sm text-gray-500 pt-8 border-t border-white/10">

@@ -14,7 +14,7 @@ RUN npm install --production
 COPY . .
 
 # Expõe a porta 3000
-EXPOSE 2888
+EXPOSE 3000
 
 # Comando para iniciar
 CMD ["npm", "start"]

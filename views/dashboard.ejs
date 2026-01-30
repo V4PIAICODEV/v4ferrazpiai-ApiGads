@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 h-screen flex flex-col">
+
+    <header class="bg-white border-b border-gray-200 p-4 flex justify-between items-center shadow-sm">
+        <div class="font-bold text-gray-800">V4 DATA DASHBOARD</div>
+        <div class="flex items-center gap-4">
+            <span class="text-sm text-gray-500">Logado como: admin@v4ferrazpiai.com.br</span>
+            <a href="/" class="text-sm text-red-600 font-medium">Sair</a>
+        </div>
+    </header>
+
+    <main class="flex-1 p-8 overflow-y-auto">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-2xl font-bold mb-6 text-gray-800">Visão Geral da Conta (Mockup)</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+                <div class="bg-white p-6 rounded-lg shadow border border-gray-100">
+                    <div class="text-gray-400 text-xs uppercase font-bold">Investimento (Mês)</div>
+                    <div class="text-2xl font-bold text-gray-800 mt-2">R$ 142.300,00</div>
+                    <div class="text-green-500 text-xs mt-1">▲ 12% vs mês anterior</div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow border border-gray-100">
+                    <div class="text-gray-400 text-xs uppercase font-bold">Conversões</div>
+                    <div class="text-2xl font-bold text-gray-800 mt-2">1.240</div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow border border-gray-100">
+                    <div class="text-gray-400 text-xs uppercase font-bold">CPA Médio</div>
+                    <div class="text-2xl font-bold text-gray-800 mt-2">R$ 35,40</div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow border border-gray-100">
+                    <div class="text-gray-400 text-xs uppercase font-bold">ROAS</div>
+                    <div class="text-2xl font-bold text-blue-600 mt-2">8.5x</div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow border border-gray-100 overflow-hidden">
+                <div class="p-4 border-b border-gray-100 bg-gray-50 font-bold text-sm text-gray-600">
+                    Campanhas Recentes (Dados de Exemplo)
+                </div>
+                <table class="w-full text-sm text-left text-gray-500">
+                    <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                        <tr>
+                            <th class="px-6 py-3">Campanha</th>
+                            <th class="px-6 py-3">Status</th>
+                            <th class="px-6 py-3">Cliques</th>
+                            <th class="px-6 py-3">Custo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="bg-white border-b hover:bg-gray-50">
+                            <td class="px-6 py-4 font-medium text-gray-900">Search | Institucional</td>
+                            <td class="px-6 py-4"><span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Ativa</span></td>
+                            <td class="px-6 py-4">4,200</td>
+                            <td class="px-6 py-4">R$ 2.100,00</td>
+                        </tr>
+                        <tr class="bg-white border-b hover:bg-gray-50">
+                            <td class="px-6 py-4 font-medium text-gray-900">Display | Remarketing</td>
+                            <td class="px-6 py-4"><span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Ativa</span></td>
+                            <td class="px-6 py-4">12,500</td>
+                            <td class="px-6 py-4">R$ 1.200,00</td>
+                        </tr>
+                        <tr class="bg-white hover:bg-gray-50">
+                            <td class="px-6 py-4 font-medium text-gray-900">PMax | Vendas</td>
+                            <td class="px-6 py-4"><span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded">Aprendizado</span></td>
+                            <td class="px-6 py-4">1,100</td>
+                            <td class="px-6 py-4">R$ 5.400,00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="mt-8 text-center">
+                 <button onclick="alert('Esta função estará disponível após a aprovação do Token.')" class="bg-blue-600 text-white px-6 py-3 rounded shadow hover:bg-blue-700 transition">
+                    Conectar Nova Conta Google Ads
+                 </button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,44 +1,271 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %></title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 text-gray-800 font-sans">
-    <div class="max-w-3xl mx-auto p-10 bg-white shadow-xl mt-10 rounded-lg">
-        <h1 class="text-3xl font-bold mb-6 text-gray-900">Política de Privacidade</h1>
-        <p class="text-sm text-gray-500 mb-8">Última atualização: 30 de Janeiro de 2026</p>
-
-        <h2 class="text-xl font-bold mb-2 mt-6">1. Introdução</h2>
-        <p class="mb-4">A V4 Ferraz Piai ("nós") leva a sua privacidade a sério. Esta política descreve como nossa aplicação interna utiliza os dados acessados através da API do Google Ads.</p>
-
-        <h2 class="text-xl font-bold mb-2 mt-6">2. Acesso aos Dados do Google</h2>
-        <p class="mb-4">Nossa aplicação acessa os seguintes dados da sua conta Google Ads:</p>
-        <ul class="list-disc pl-5 mb-4 space-y-2">
-            <li>Métricas de desempenho (Cliques, Impressões, Custo, Conversões).</li>
-            <li>Configurações de Campanha e Grupo de Anúncios.</li>
-            <li>IDs de clientes para geração de relatórios.</li>
-        </ul>
-
-        <h2 class="text-xl font-bold mb-2 mt-6">3. Uso dos Dados (Limited Use Policy)</h2>
-        <p class="mb-4">O uso das informações recebidas das APIs do Google aderirá à <strong>Google API Services User Data Policy</strong>, incluindo os requisitos de uso limitado.</p>
-        <p class="mb-4">Nós utilizamos os dados estritamente para:</p>
-        <ul class="list-disc pl-5 mb-4">
-            <li>Gerar relatórios de performance internos.</li>
-            <li>Auditar configurações de campanhas para melhoria de qualidade.</li>
-        </ul>
-        <p class="font-bold">Nós NÃO vendemos, transferimos ou compartilhamos seus dados com terceiros para fins de publicidade ou qualquer outro fim não autorizado.</p>
-
-        <h2 class="text-xl font-bold mb-2 mt-6">4. Armazenamento e Segurança</h2>
-        <p class="mb-4">Os dados são processados em tempo real ou armazenados temporariamente em servidores seguros (criptografados) apenas pelo tempo necessário para a geração da análise.</p>
-
-        <h2 class="text-xl font-bold mb-2 mt-6">5. Contato</h2>
-        <p class="mb-4">Para dúvidas sobre privacidade, entre em contato: ferramenta.ferraz@v4company.com</p>
+<body class="bg-gray-50 text-gray-800 font-sans">
+    <div class="max-w-4xl mx-auto p-10 bg-white shadow-xl mt-10 mb-10 rounded-xl">
         
-        <div class="mt-10 border-t pt-6">
-            <a href="/" class="text-blue-600 hover:underline">&larr; Voltar para Home</a>
+        <!-- Header -->
+        <div class="mb-8 pb-6 border-b border-gray-200">
+            <div class="flex items-center space-x-3 mb-4">
+                <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center font-bold text-white text-xl">V4</div>
+                <div>
+                    <h1 class="text-3xl font-bold text-gray-900">Privacy Policy</h1>
+                    <p class="text-sm text-gray-500">V4 Ferraz Piai Internal Data Hub</p>
+                </div>
+            </div>
+            <p class="text-sm text-gray-500">Last updated: January 30, 2026</p>
+        </div>
+
+        <!-- Introduction -->
+        <div class="mb-8">
+            <h2 class="text-2xl font-bold mb-4 text-gray-900 flex items-center">
+                <span class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-3 text-purple-600">📋</span>
+                1. Introduction
+            </h2>
+            <p class="text-gray-700 leading-relaxed">
+                V4 Ferraz Piai ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy describes how our internal application uses and protects data accessed through the Google Ads API. This application is for <strong>internal use only</strong> by authorized V4 Ferraz Piai employees.
+            </p>
+        </div>
+
+        <!-- Google Data Access -->
+        <div class="mb-8">
+            <h2 class="text-2xl font-bold mb-4 text-gray-900 flex items-center">
+                <span class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center mr-3 text-blue-600">🔐</span>
+                2. Google Data Access
+            </h2>
+            <p class="text-gray-700 mb-4 leading-relaxed">
+                Our application accesses the following data from your Google Ads account through the Google Ads API:
+            </p>
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-lg">
+                <ul class="space-y-3 text-gray-700">
+                    <li class="flex items-start">
+                        <span class="text-blue-600 mr-3 font-bold">•</span>
+                        <span><strong>Performance Metrics:</strong> Clicks, impressions, cost, conversions, CPA, ROAS, CPC, CTR</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-blue-600 mr-3 font-bold">•</span>
+                        <span><strong>Campaign Configuration:</strong> Campaign settings, ad group structures, bidding strategies</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-blue-600 mr-3 font-bold">•</span>
+                        <span><strong>Ad Creative:</strong> Ad texts, headlines, descriptions, keywords</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-blue-600 mr-3 font-bold">•</span>
+                        <span><strong>Account Information:</strong> Customer IDs, account names for reporting purposes</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-blue-600 mr-3 font-bold">•</span>
+                        <span><strong>Budget Information:</strong> Daily budgets, campaign spending data</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Limited Use Policy -->
+        <div class="mb-8">
+            <h2 class="text-2xl font-bold mb-4 text-gray-900 flex items-center">
+                <span class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-3 text-purple-600">⚖️</span>
+                3. Limited Use Requirements (Google API Services User Data Policy)
+            </h2>
+            <div class="bg-purple-50 border border-purple-200 rounded-xl p-6 mb-4">
+                <p class="font-bold text-purple-900 mb-3">Our use of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" class="underline hover:text-purple-700" target="_blank">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+            </div>
+            <p class="text-gray-700 mb-4 leading-relaxed">We use the accessed data strictly and exclusively for:</p>
+            <div class="bg-white border border-gray-200 rounded-lg p-6">
+                <ul class="space-y-3 text-gray-700">
+                    <li class="flex items-start">
+                        <span class="text-purple-600 mr-3 font-bold">✓</span>
+                        <span>Generating internal performance reports for authorized V4 Ferraz Piai employees</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-purple-600 mr-3 font-bold">✓</span>
+                        <span>Auditing campaign configurations to ensure quality standards and best practices</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-purple-600 mr-3 font-bold">✓</span>
+                        <span>Optimizing campaign performance through rule-based automation</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-purple-600 mr-3 font-bold">✓</span>
+                        <span>Identifying critical issues (low budget alerts, disapproved ads, zero-impression campaigns)</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-purple-600 mr-3 font-bold">✓</span>
+                        <span>Analyzing historical trends for strategic decision-making</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- What We Don't Do -->
+        <div class="mb-8">
+            <h2 class="text-2xl font-bold mb-4 text-gray-900 flex items-center">
+                <span class="w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center mr-3 text-red-600">🚫</span>
+                4. What We DO NOT Do With Your Data
+            </h2>
+            <div class="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-lg">
+                <ul class="space-y-3 text-gray-700">
+                    <li class="flex items-start">
+                        <span class="text-red-600 mr-3 font-bold text-xl">×</span>
+                        <span><strong>NO SELLING:</strong> We do not sell, rent, or trade your data to any third parties</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-red-600 mr-3 font-bold text-xl">×</span>
+                        <span><strong>NO EXTERNAL SHARING:</strong> We do not share your data with external organizations for advertising or marketing purposes</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-red-600 mr-3 font-bold text-xl">×</span>
+                        <span><strong>NO UNAUTHORIZED TRANSFERS:</strong> We do not transfer your data for purposes unrelated to account management</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-red-600 mr-3 font-bold text-xl">×</span>
+                        <span><strong>NO HUMAN CREDITWORTHINESS DETERMINATION:</strong> We do not use your data for determining creditworthiness or lending purposes</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Data Storage and Security -->
+        <div class="mb-8">
+            <h2 class="text-2xl font-bold mb-4 text-gray-900 flex items-center">
+                <span class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center mr-3 text-green-600">🔒</span>
+                5. Data Storage & Security
+            </h2>
+            <p class="text-gray-700 mb-4 leading-relaxed">
+                We implement industry-standard security measures to protect the data accessed through the Google Ads API:
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-white border border-gray-200 rounded-lg p-4">
+                    <h4 class="font-bold text-gray-800 mb-2 flex items-center">
+                        <span class="w-6 h-6 bg-green-100 rounded flex items-center justify-center mr-2 text-green-600 text-sm">🔐</span>
+                        Encryption
+                    </h4>
+                    <p class="text-sm text-gray-600">All data is encrypted both in transit (TLS/SSL) and at rest using industry-standard encryption protocols.</p>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-4">
+                    <h4 class="font-bold text-gray-800 mb-2 flex items-center">
+                        <span class="w-6 h-6 bg-green-100 rounded flex items-center justify-center mr-2 text-green-600 text-sm">🗄️</span>
+                        Secure Storage
+                    </h4>
+                    <p class="text-sm text-gray-600">Data is stored in a secure PostgreSQL database with restricted access controls and regular backups.</p>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-4">
+                    <h4 class="font-bold text-gray-800 mb-2 flex items-center">
+                        <span class="w-6 h-6 bg-green-100 rounded flex items-center justify-center mr-2 text-green-600 text-sm">⏱️</span>
+                        Temporary Storage
+                    </h4>
+                    <p class="text-sm text-gray-600">Performance metrics are cached temporarily for analysis purposes and automatically purged based on retention policies.</p>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-4">
+                    <h4 class="font-bold text-gray-800 mb-2 flex items-center">
+                        <span class="w-6 h-6 bg-green-100 rounded flex items-center justify-center mr-2 text-green-600 text-sm">👥</span>
+                        Access Control
+                    </h4>
+                    <p class="text-sm text-gray-600">Access is strictly limited to authorized V4 Ferraz Piai employees through secure authentication mechanisms.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- User Rights -->
+        <div class="mb-8">
+            <h2 class="text-2xl font-bold mb-4 text-gray-900 flex items-center">
+                <span class="w-8 h-8 bg-yellow-100 rounded-lg flex items-center justify-center mr-3 text-yellow-600">👤</span>
+                6. Your Rights & Data Control
+            </h2>
+            <p class="text-gray-700 mb-4 leading-relaxed">
+                As a user whose Google Ads account is connected to our system, you have the following rights:
+            </p>
+            <ul class="space-y-3 text-gray-700">
+                <li class="flex items-start">
+                    <span class="text-yellow-600 mr-3 font-bold">•</span>
+                    <span><strong>Revocation:</strong> You can revoke our application's access to your Google Ads account at any time through your Google Account settings</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-yellow-600 mr-3 font-bold">•</span>
+                    <span><strong>Data Deletion:</strong> You can request deletion of your cached data by contacting our team</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-yellow-600 mr-3 font-bold">•</span>
+                    <span><strong>Transparency:</strong> You can request information about what data is being accessed and how it's being used</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Compliance -->
+        <div class="mb-8">
+            <h2 class="text-2xl font-bold mb-4 text-gray-900 flex items-center">
+                <span class="w-8 h-8 bg-indigo-100 rounded-lg flex items-center justify-center mr-3 text-indigo-600">📜</span>
+                7. Compliance & Certifications
+            </h2>
+            <div class="bg-indigo-50 border border-indigo-200 rounded-lg p-6">
+                <p class="text-gray-700 leading-relaxed">
+                    Our application and data handling practices are designed to comply with:
+                </p>
+                <ul class="mt-4 space-y-2 text-gray-700">
+                    <li class="flex items-center">
+                        <span class="w-2 h-2 bg-indigo-600 rounded-full mr-3"></span>
+                        Google API Services User Data Policy
+                    </li>
+                    <li class="flex items-center">
+                        <span class="w-2 h-2 bg-indigo-600 rounded-full mr-3"></span>
+                        Google Ads API Terms of Service
+                    </li>
+                    <li class="flex items-center">
+                        <span class="w-2 h-2 bg-indigo-600 rounded-full mr-3"></span>
+                        LGPD (Lei Geral de Proteção de Dados - Brazil)
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Changes to Policy -->
+        <div class="mb-8">
+            <h2 class="text-2xl font-bold mb-4 text-gray-900 flex items-center">
+                <span class="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center mr-3 text-gray-600">🔄</span>
+                8. Changes to This Policy
+            </h2>
+            <p class="text-gray-700 leading-relaxed">
+                We may update this Privacy Policy from time to time to reflect changes in our practices or for legal, regulatory, or operational reasons. We will notify users of any material changes by updating the "Last Updated" date at the top of this policy.
+            </p>
+        </div>
+
+        <!-- Contact -->
+        <div class="mb-8">
+            <h2 class="text-2xl font-bold mb-4 text-gray-900 flex items-center">
+                <span class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-3 text-purple-600">📧</span>
+                9. Contact Information
+            </h2>
+            <div class="bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-200 rounded-xl p-6">
+                <p class="text-gray-700 mb-4">For questions about this Privacy Policy, data access, or to exercise your rights:</p>
+                <div class="space-y-2">
+                    <p class="text-sm">
+                        <strong class="text-gray-800">Email:</strong> 
+                        <a href="mailto:ferramenta.ferraz@v4company.com" class="text-purple-600 hover:text-purple-800 font-semibold">ferramenta.ferraz@v4company.com</a>
+                    </p>
+                    <p class="text-sm">
+                        <strong class="text-gray-800">Organization:</strong> V4 Ferraz Piai
+                    </p>
+                    <p class="text-sm">
+                        <strong class="text-gray-800">Application:</strong> V4 Ferraz Piai Internal Data Hub
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Back to Home -->
+        <div class="mt-12 pt-6 border-t border-gray-200">
+            <a href="/" class="inline-flex items-center text-purple-600 hover:text-purple-800 font-semibold transition">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+                </svg>
+                Back to Home
+            </a>
         </div>
     </div>
 </body>

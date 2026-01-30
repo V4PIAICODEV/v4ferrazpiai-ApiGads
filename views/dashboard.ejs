@@ -1,85 +1,236 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %></title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .stat-card {
+            transition: all 0.3s ease;
+        }
+        .stat-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+    </style>
 </head>
 <body class="bg-gray-50 h-screen flex flex-col">
 
-    <header class="bg-white border-b border-gray-200 p-4 flex justify-between items-center shadow-sm">
-        <div class="font-bold text-gray-800">V4 DATA DASHBOARD</div>
-        <div class="flex items-center gap-4">
-            <span class="text-sm text-gray-500">Logado como: admin@v4ferrazpiai.com.br</span>
-            <a href="/" class="text-sm text-red-600 font-medium">Sair</a>
+    <!-- Header -->
+    <header class="bg-white border-b border-gray-200 p-4 shadow-sm">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center font-bold text-white text-sm">V4</div>
+                <div>
+                    <div class="font-bold text-gray-800">V4 Data Dashboard</div>
+                    <div class="text-xs text-gray-500">Google Ads API Integration</div>
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <span class="text-sm text-gray-500">Logged in as: <strong>admin@v4ferrazpiai.com.br</strong></span>
+                <a href="/" class="text-sm text-red-600 font-medium hover:text-red-700 transition">Sign Out</a>
+            </div>
         </div>
     </header>
 
-    <main class="flex-1 p-8 overflow-y-auto">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-2xl font-bold mb-6 text-gray-800">Visão Geral da Conta (Mockup)</h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-                <div class="bg-white p-6 rounded-lg shadow border border-gray-100">
-                    <div class="text-gray-400 text-xs uppercase font-bold">Investimento (Mês)</div>
-                    <div class="text-2xl font-bold text-gray-800 mt-2">R$ 142.300,00</div>
-                    <div class="text-green-500 text-xs mt-1">▲ 12% vs mês anterior</div>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow border border-gray-100">
-                    <div class="text-gray-400 text-xs uppercase font-bold">Conversões</div>
-                    <div class="text-2xl font-bold text-gray-800 mt-2">1.240</div>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow border border-gray-100">
-                    <div class="text-gray-400 text-xs uppercase font-bold">CPA Médio</div>
-                    <div class="text-2xl font-bold text-gray-800 mt-2">R$ 35,40</div>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow border border-gray-100">
-                    <div class="text-gray-400 text-xs uppercase font-bold">ROAS</div>
-                    <div class="text-2xl font-bold text-blue-600 mt-2">8.5x</div>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-lg shadow border border-gray-100 overflow-hidden">
-                <div class="p-4 border-b border-gray-100 bg-gray-50 font-bold text-sm text-gray-600">
-                    Campanhas Recentes (Dados de Exemplo)
-                </div>
-                <table class="w-full text-sm text-left text-gray-500">
-                    <thead class="text-xs text-gray-700 uppercase bg-gray-50">
-                        <tr>
-                            <th class="px-6 py-3">Campanha</th>
-                            <th class="px-6 py-3">Status</th>
-                            <th class="px-6 py-3">Cliques</th>
-                            <th class="px-6 py-3">Custo</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="bg-white border-b hover:bg-gray-50">
-                            <td class="px-6 py-4 font-medium text-gray-900">Search | Institucional</td>
-                            <td class="px-6 py-4"><span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Ativa</span></td>
-                            <td class="px-6 py-4">4,200</td>
-                            <td class="px-6 py-4">R$ 2.100,00</td>
-                        </tr>
-                        <tr class="bg-white border-b hover:bg-gray-50">
-                            <td class="px-6 py-4 font-medium text-gray-900">Display | Remarketing</td>
-                            <td class="px-6 py-4"><span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Ativa</span></td>
-                            <td class="px-6 py-4">12,500</td>
-                            <td class="px-6 py-4">R$ 1.200,00</td>
-                        </tr>
-                        <tr class="bg-white hover:bg-gray-50">
-                            <td class="px-6 py-4 font-medium text-gray-900">PMax | Vendas</td>
-                            <td class="px-6 py-4"><span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded">Aprendizado</span></td>
-                            <td class="px-6 py-4">1,100</td>
-                            <td class="px-6 py-4">R$ 5.400,00</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+    <!-- Main Content -->
+    <main class="flex-1 p-8 overflow-y-auto bg-gray-50">
+        <div class="max-w-7xl mx-auto">
             
-            <div class="mt-8 text-center">
-                 <button onclick="alert('Esta função estará disponível após a aprovação do Token.')" class="bg-blue-600 text-white px-6 py-3 rounded shadow hover:bg-blue-700 transition">
-                    Conectar Nova Conta Google Ads
-                 </button>
+            <!-- Page Title -->
+            <div class="mb-8">
+                <h1 class="text-3xl font-bold text-gray-800 mb-2">Account Overview</h1>
+                <p class="text-gray-600">Mockup demonstration of Google Ads API data integration</p>
+            </div>
+
+            <!-- KPI Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 stat-card">
+                    <div class="flex items-center justify-between mb-2">
+                        <div class="text-gray-500 text-xs uppercase font-bold tracking-wide">Monthly Spend</div>
+                        <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600">💰</div>
+                    </div>
+                    <div class="text-3xl font-bold text-gray-800">R$ 142,300</div>
+                    <div class="flex items-center mt-2 text-xs">
+                        <span class="text-green-600 font-semibold">▲ 12%</span>
+                        <span class="text-gray-500 ml-1">vs previous month</span>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 stat-card">
+                    <div class="flex items-center justify-between mb-2">
+                        <div class="text-gray-500 text-xs uppercase font-bold tracking-wide">Conversions</div>
+                        <div class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center text-purple-600">🎯</div>
+                    </div>
+                    <div class="text-3xl font-bold text-gray-800">1,240</div>
+                    <div class="flex items-center mt-2 text-xs">
+                        <span class="text-green-600 font-semibold">▲ 8.3%</span>
+                        <span class="text-gray-500 ml-1">vs previous month</span>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 stat-card">
+                    <div class="flex items-center justify-between mb-2">
+                        <div class="text-gray-500 text-xs uppercase font-bold tracking-wide">Avg CPA</div>
+                        <div class="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center text-orange-600">📊</div>
+                    </div>
+                    <div class="text-3xl font-bold text-gray-800">R$ 35.40</div>
+                    <div class="flex items-center mt-2 text-xs">
+                        <span class="text-red-600 font-semibold">▼ 3.2%</span>
+                        <span class="text-gray-500 ml-1">vs previous month</span>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 stat-card">
+                    <div class="flex items-center justify-between mb-2">
+                        <div class="text-gray-500 text-xs uppercase font-bold tracking-wide">ROAS</div>
+                        <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center text-green-600">📈</div>
+                    </div>
+                    <div class="text-3xl font-bold text-blue-600">8.5x</div>
+                    <div class="flex items-center mt-2 text-xs">
+                        <span class="text-green-600 font-semibold">▲ 15%</span>
+                        <span class="text-gray-500 ml-1">vs previous month</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Campaign Table -->
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden mb-8">
+                <div class="px-6 py-4 border-b border-gray-100 bg-gray-50 flex justify-between items-center">
+                    <div>
+                        <h2 class="font-bold text-gray-800">Recent Campaigns</h2>
+                        <p class="text-xs text-gray-500 mt-1">Sample data from Google Ads API integration</p>
+                    </div>
+                    <button class="px-4 py-2 bg-purple-600 text-white rounded-lg text-sm font-semibold hover:bg-purple-700 transition">
+                        Refresh Data
+                    </button>
+                </div>
+                
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm text-left">
+                        <thead class="text-xs text-gray-700 uppercase bg-gray-50 border-b border-gray-200">
+                            <tr>
+                                <th class="px-6 py-4 font-semibold">Campaign Name</th>
+                                <th class="px-6 py-4 font-semibold">Status</th>
+                                <th class="px-6 py-4 font-semibold">Clicks</th>
+                                <th class="px-6 py-4 font-semibold">Impressions</th>
+                                <th class="px-6 py-4 font-semibold">Cost</th>
+                                <th class="px-6 py-4 font-semibold">Conversions</th>
+                                <th class="px-6 py-4 font-semibold">CPA</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100">
+                            <tr class="hover:bg-gray-50 transition">
+                                <td class="px-6 py-4">
+                                    <div class="font-medium text-gray-900">Search | Institutional</div>
+                                    <div class="text-xs text-gray-500">Campaign ID: 12345678</div>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-semibold rounded-full">Active</span>
+                                </td>
+                                <td class="px-6 py-4 text-gray-700">4,200</td>
+                                <td class="px-6 py-4 text-gray-700">45,300</td>
+                                <td class="px-6 py-4 text-gray-700">R$ 2,100.00</td>
+                                <td class="px-6 py-4 text-gray-700">84</td>
+                                <td class="px-6 py-4 text-gray-700">R$ 25.00</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition">
+                                <td class="px-6 py-4">
+                                    <div class="font-medium text-gray-900">Display | Remarketing</div>
+                                    <div class="text-xs text-gray-500">Campaign ID: 23456789</div>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-semibold rounded-full">Active</span>
+                                </td>
+                                <td class="px-6 py-4 text-gray-700">12,500</td>
+                                <td class="px-6 py-4 text-gray-700">890,200</td>
+                                <td class="px-6 py-4 text-gray-700">R$ 1,200.00</td>
+                                <td class="px-6 py-4 text-gray-700">60</td>
+                                <td class="px-6 py-4 text-gray-700">R$ 20.00</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition">
+                                <td class="px-6 py-4">
+                                    <div class="font-medium text-gray-900">PMax | Sales</div>
+                                    <div class="text-xs text-gray-500">Campaign ID: 34567890</div>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-xs font-semibold rounded-full">Learning</span>
+                                </td>
+                                <td class="px-6 py-4 text-gray-700">1,100</td>
+                                <td class="px-6 py-4 text-gray-700">28,450</td>
+                                <td class="px-6 py-4 text-gray-700">R$ 5,400.00</td>
+                                <td class="px-6 py-4 text-gray-700">108</td>
+                                <td class="px-6 py-4 text-gray-700">R$ 50.00</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition">
+                                <td class="px-6 py-4">
+                                    <div class="font-medium text-gray-900">Video | YouTube Awareness</div>
+                                    <div class="text-xs text-gray-500">Campaign ID: 45678901</div>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-semibold rounded-full">Active</span>
+                                </td>
+                                <td class="px-6 py-4 text-gray-700">850</td>
+                                <td class="px-6 py-4 text-gray-700">125,600</td>
+                                <td class="px-6 py-4 text-gray-700">R$ 980.00</td>
+                                <td class="px-6 py-4 text-gray-700">15</td>
+                                <td class="px-6 py-4 text-gray-700">R$ 65.33</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Action Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <!-- API Integration Card -->
+                <div class="bg-gradient-to-br from-purple-500 to-pink-500 p-8 rounded-xl text-white shadow-lg">
+                    <div class="text-3xl mb-4">🔌</div>
+                    <h3 class="text-xl font-bold mb-2">Google Ads API Connection</h3>
+                    <p class="text-purple-100 mb-6 text-sm">Connect and authenticate new Google Ads accounts for automated monitoring and optimization.</p>
+                    <button onclick="alert('This feature will be available after OAuth token approval from Google.')" class="w-full bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50 transition">
+                        Connect New Account
+                    </button>
+                </div>
+
+                <!-- Automation Card -->
+                <div class="bg-gradient-to-br from-blue-500 to-cyan-500 p-8 rounded-xl text-white shadow-lg">
+                    <div class="text-3xl mb-4">⚡</div>
+                    <h3 class="text-xl font-bold mb-2">Automation Rules</h3>
+                    <p class="text-blue-100 mb-6 text-sm">Configure rule-based actions for campaign optimization, budget management, and performance alerts.</p>
+                    <button onclick="alert('Automation rules configuration coming soon.')" class="w-full bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition">
+                        Configure Rules
+                    </button>
+                </div>
+            </div>
+
+            <!-- Technical Info -->
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-8">
+                <h3 class="text-lg font-bold text-gray-800 mb-4">System Information</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                    <div class="flex items-center space-x-3 p-4 bg-gray-50 rounded-lg">
+                        <div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center text-purple-600 font-bold">API</div>
+                        <div>
+                            <div class="text-gray-500 text-xs">Integration Status</div>
+                            <div class="font-semibold text-gray-800">Google Ads API v16</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-3 p-4 bg-gray-50 rounded-lg">
+                        <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 font-bold">DB</div>
+                        <div>
+                            <div class="text-gray-500 text-xs">Database</div>
+                            <div class="font-semibold text-gray-800">PostgreSQL 15</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-3 p-4 bg-gray-50 rounded-lg">
+                        <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center text-green-600 font-bold">N8N</div>
+                        <div>
+                            <div class="text-gray-500 text-xs">Automation</div>
+                            <div class="font-semibold text-gray-800">N8N Workflows Active</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
